@@ -1,0 +1,155 @@
+/* ========= VARIABLES ========= */
+/* ========= RESET ========= */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #ffe000 url("http://anwen-w.local/wp-content/uploads/2019/01/background-shapes-irregular.svg") scroll;
+  background-size: 100px;
+  background-position-y: 14px;
+  font-family: 'Open Sans', Verdana; }
+
+/* ========= HEADER ========= */
+header {
+  background-color: #ffffff;
+  height: 118px;
+  margin-bottom: 50px; }
+
+.title {
+  padding: 8px 30px; }
+
+header h1 {
+  font-family: 'Megrim', Courier;
+  font-size: 3.6em; }
+
+header h1 a {
+  text-decoration: none;
+  color: #000000; }
+
+header h2 {
+  font-family: 'Josefin Slab', Courier;
+  font-weight: 600;
+  font-size: 1.4em; }
+
+/* ========= NAVIGATION ========= */
+nav {
+  background-color: #444444;
+  min-height: 36px;
+  padding: 0 24px;
+  text-align: right;
+  color: #ffffff; }
+
+nav li {
+  display: inline-block;
+  padding: 8px 22px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.6px; }
+
+nav li a {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 9px solid transparent; }
+
+nav li a:hover {
+  transition: 0.3s;
+  color: #ffe000;
+  border-bottom: 9px solid #ffe000; }
+
+/* ========= PAGE TITLE ========= */
+.page-title-text h3 {
+  padding: 5px 0;
+  margin-left: 10%;
+  color: #333333;
+  text-transform: uppercase;
+  font-size: 1.8em; }
+
+.page-title-text h4 {
+  background-color: #444444;
+  color: #ffffff;
+  padding: 4px 10% 6px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: 0.2px;
+  width: fit-content; }
+
+.page-title-text a {
+  color: #076f96; }
+
+.page-title-text a:hover {
+  color: #000000; }
+
+/* ========= PAGE CONTENT + SINGLE POST CONTENT ========= */
+.page-content, .single-content {
+  background-color: #ffffff;
+  border: 1px solid #444444;
+  width: 80%;
+  max-width: 900px;
+  min-height: 200px;
+  padding: 30px 40px;
+  margin: 0 auto 100px; }
+
+.single-content {
+  margin-top: 80px; }
+
+.single-content h3 {
+  color: #333333;
+  font-size: 1.2em; }
+
+.single-image {
+  max-width: 780px;
+  margin: 15px auto; }
+
+.single-text {
+  color: #333333;
+  line-height: 1.6em; }
+
+/* ========= FRONT PAGE POSTS ========= */
+.posts-grid {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(2, 1fr); }
+
+img {
+  max-width: 100%;
+  border: 1px solid #666; }
+
+.grid-item {
+  background-color: #ffffff;
+  border: 1px solid #444444;
+  padding: 14px 18px;
+  color: #333; }
+
+.grid-item h3 {
+  padding: 6px 0; }
+
+.grid-item h3 a {
+  text-decoration: none;
+  color: #076f96; }
+
+.grid-item h3 a:hover {
+  text-decoration: underline;
+  color: #000000; }
+
+.read-more, .read-more a {
+  color: #076f96;
+  font-weight: 600;
+  padding: 6px 0; }
+
+.read-more {
+  float: right; }
+
+.read-more:hover {
+  color: #000000; }
+
+.read-more a:hover {
+  color: #000000; }
+
+/*# sourceMappingURL=main.css.map */
