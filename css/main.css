@@ -30,15 +30,6 @@ header {
 .title {
   padding: 8px 20px 15px; }
 
-/* ========= MOBILE: PAGE CONTENT ========= */
-.page-content, .single-content {
-  background-color: #ffffff;
-  border: 1px solid #444444;
-  width: 85%;
-  min-height: 200px;
-  padding: 15px 20px 20px;
-  margin: 42px auto 70px; }
-
 /* ========= MOBILE: NAV MENU ========= */
 nav {
   background-color: #444444;
@@ -56,11 +47,12 @@ nav {
     letter-spacing: 0.6px; }
     nav li a {
       text-decoration: none;
-      color: #ffffff; }
+      color: #ffffff;
+      border-bottom: 2px solid transparent; }
       nav li a:hover {
         transition: 0.3s;
         color: #ffe000;
-        text-decoration: underline; }
+        border-bottom: 2px solid #ffe000; }
 
 .nav-menu-group:after {
   content: "";
@@ -80,7 +72,7 @@ nav {
   width: 36px;
   height: 30px;
   float: right;
-  margin: 10px; }
+  margin: 10px 10px 8px; }
   .navicon:hover i {
     background-color: #ffe000; }
 
@@ -110,7 +102,101 @@ i {
   transform: rotate(-45deg);
   right: -3px; }
 
-/* ========= NAVIGATION ========= */
+/* ========= MOBILE: FRONT PAGE POSTS ========= */
+.posts-grid {
+  width: 90%;
+  margin: 20px auto 100px;
+  display: grid;
+  grid-gap: 18px;
+  grid-template-columns: 1fr; }
+  .posts-grid img {
+    max-width: 100%;
+    border: 1px solid #666666; }
+
+.grid-item {
+  display: grid;
+  background-color: #ffffff;
+  border: 1px solid #444444;
+  padding: 12px 14px;
+  color: #333333;
+  font-size: 15px; }
+  .grid-item h3 {
+    padding: 6px 0; }
+    .grid-item h3 a {
+      text-decoration: none;
+      color: #076f96; }
+      .grid-item h3 a:hover {
+        text-decoration: underline;
+        color: #000000; }
+
+.read-more {
+  display: grid;
+  justify-content: end;
+  align-self: end; }
+
+.read-more, .read-more a {
+  color: #076f96;
+  font-weight: 600;
+  padding: 4px 0; }
+  .read-more:hover, .read-more a:hover {
+    color: #000000; }
+
+/* ========= MOBILE: PAGE TITLE ========= */
+.page-title-text h3 {
+  padding: 0 12px 5px;
+  color: #333333;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  border-bottom: 3px solid #333333; }
+.page-title-text h4 {
+  color: #333333;
+  padding: 5px 14px 0;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 0.1px; }
+.page-title-text a {
+  color: #076f96; }
+  .page-title-text a:hover {
+    color: #000000; }
+
+/* ========= MOBILE: PAGE + SINGLE POST ========= */
+.page-content, .single-content {
+  background-color: #ffffff;
+  border: 1px solid #444444;
+  width: 85%;
+  min-height: 200px;
+  padding: 15px 20px 20px;
+  margin: 42px auto 70px; }
+
+.single-content h3 {
+  color: #333333;
+  font-size: 1.3em; }
+
+.single-image {
+  max-width: 780px;
+  margin: 15px auto; }
+  .single-image img {
+    width: 100%;
+    border: 1px solid #666666; }
+
+.single-text {
+  color: #333333;
+  line-height: 1.7em; }
+  .single-text a {
+    color: #076f96; }
+    .single-text a:hover {
+      color: #000000; }
+
+.projects-back {
+  float: right; }
+  .projects-back a {
+    color: #076f96;
+    font-weight: 600;
+    padding: 4px 0; }
+    .projects-back a:hover {
+      color: #000000; }
+
+/* ========== MEDIA QUERIES ========== */
 /* ========= HEADER ========= */
 @media only screen and (min-width: 600px) {
   .title {
@@ -132,35 +218,13 @@ i {
       nav li a {
         border-bottom: 9px solid transparent; }
         nav li a:hover {
-          border-bottom: 9px solid #ffe000;
-          text-decoration: none; }
+          border-bottom: 9px solid #ffe000; }
 
   .navicon {
     display: none; }
 
   .main-menu {
     display: inline-block; } }
-/* ========= PAGE TITLE ========= */
-.page-title-text h3 {
-  padding: 5px 0;
-  margin-left: 10%;
-  color: #333333;
-  text-transform: uppercase;
-  font-size: 1.8em; }
-.page-title-text h4 {
-  background-color: #444444;
-  color: #ffffff;
-  padding: 4px 10% 6px;
-  margin-bottom: 15px;
-  font-weight: 500;
-  font-size: 1em;
-  letter-spacing: 0.2px;
-  width: fit-content; }
-.page-title-text a {
-  color: #076f96; }
-  .page-title-text a:hover {
-    color: #000000; }
-
 /* ========= PAGE CONTENT + SINGLE POST CONTENT ========= */
 @media only screen and (min-width: 510px) {
   .page-content, .single-content {
@@ -177,62 +241,38 @@ i {
     width: 80%;
     max-width: 900px;
     padding: 20px 60px 60px; } }
-.single-content h3 {
-  color: #333333;
-  font-size: 1.2em; }
+/* ========= FRONT PAGE POSTS + PAGE TITLE ========= */
+@media only screen and (min-width: 500px) {
+  .grid-item {
+    padding: 14px 18px; }
 
-.single-image {
-  max-width: 780px;
-  margin: 15px auto; }
-  .single-image img {
-    width: 100%; }
+  .page-title-text h3 {
+    padding: 0 17px 5px; }
+  .page-title-text h4 {
+    padding: 5px 18px 0; } }
+@media only screen and (min-width: 650px) {
+  .grid-item {
+    padding: 12px 14px; }
 
-.single-text {
-  color: #333333;
-  line-height: 1.7em; }
-  .single-text a {
-    color: #076f96; }
-    .single-text a:hover {
-      color: #000000; }
+  .posts-grid {
+    max-width: 900px;
+    grid-gap: 25px;
+    grid-template-columns: repeat(2, 1fr); }
 
-/* ========= FRONT PAGE POSTS ========= */
-.posts-grid {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto 100px;
-  display: grid;
-  grid-gap: 25px;
-  grid-template-columns: repeat(2, 1fr); }
-  .posts-grid img {
-    max-width: 100%;
-    border: 1px solid #666; }
+  .page-title-text {
+    grid-column: span 2; }
+    .page-title-text h3 {
+      padding: 0 12px 5px;
+      font-size: 1.4em; }
+    .page-title-text h4 {
+      padding: 5px 14px 0; } }
+@media only screen and (min-width: 830px) {
+  .grid-item {
+    padding: 14px 18px; }
 
-.grid-item {
-  background-color: #ffffff;
-  border: 1px solid #444444;
-  padding: 14px 18px;
-  color: #333; }
-  .grid-item h3 {
-    padding: 6px 0; }
-    .grid-item h3 a {
-      text-decoration: none;
-      color: #076f96; }
-      .grid-item h3 a:hover {
-        text-decoration: underline;
-        color: #000000; }
-
-.read-more, .read-more a {
-  color: #076f96;
-  font-weight: 600;
-  padding: 6px 0; }
-
-.read-more {
-  float: right; }
-
-.read-more:hover {
-  color: #000000; }
-
-.read-more a:hover {
-  color: #000000; }
+  .page-title-text h3 {
+    padding: 0 17px 5px; }
+  .page-title-text h4 {
+    padding: 5px 18px 0; } }
 
 /*# sourceMappingURL=main.css.map */

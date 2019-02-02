@@ -18,10 +18,12 @@
 			<div class="single-text">
 				<?php the_content(); ?>
 			</div>
-			
+
 			<?php endwhile;
 		endif;
 		?>
+
+		<div class="projects-back"><a href="http://anwen-w.local/">Back to Coding Projects</a></div>
 
 	</div> <!-- closes single-content -->
 

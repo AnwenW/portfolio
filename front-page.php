@@ -10,7 +10,7 @@ $frontpage_self_projects = new WP_Query(array(
 
 ?>
 
-  <?php if(have_posts()) :
+  <!-- <?php if(have_posts()) :
 		while(have_posts()) : the_post(); ?>
 
       <div class="page-title-text">
@@ -20,13 +20,25 @@ $frontpage_self_projects = new WP_Query(array(
 
 		<?php endwhile;
 	endif;
-	?>
+	?> -->
 
 	<section class="projects-group">
 
 		<!-- blog post loop using custom WP_Query rather than standard loop, pulling in content from posts with 'self-initiated' category -->
 
     <div class="posts-grid">
+
+      <?php if(have_posts()) :
+    		while(have_posts()) : the_post(); ?>
+
+          <div class="page-title-text">
+            <h3 class="page-title"><?php the_title(); ?></h3>
+            <h4><?php the_content(); ?></h4>
+          </div>
+
+    		<?php endwhile;
+    	endif;
+    	?>
 
   		<?php if (have_posts()) :
   			while ($frontpage_self_projects->have_posts()) : $frontpage_self_projects->the_post(); ?>
@@ -44,7 +56,9 @@ $frontpage_self_projects = new WP_Query(array(
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
             <p><?php the_excerpt();?></p>
-            <p class="read-more"><a href="<?php echo get_permalink(); ?>"> Read more</a> >></p>
+            <div class="read-more">
+              <p><a href="<?php echo get_permalink(); ?>"> Read more</a> >></p>
+            </div>
 
   				</div>
 
