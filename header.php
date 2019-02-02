@@ -22,22 +22,23 @@
 
 			<div class="title">
 				<h1><a href="<?php bloginfo('url'); ?>">Anwen W</a></h1>
-	      <h2>Coding, doodling and codebar Brighton</h2>
+	      <h2>Coding, doodling & codebar&nbsp;Brighton</h2>
 			</div>
 
-			<nav role="navigation">
+			<nav role="navigation" class="nav-menu-group">
 
-				<!-- To rename default class/IDs for menu, replace this with below array: -->
-				<!-- <?php wp_nav_menu(); ?> -->
+				<a href="#" class="navicon">
+          <i></i>
+          <i></i>
+          <i></i>
+        </a>
 
 				<?php wp_nav_menu(array(
-					'menu_class' => 'main-nav',
+					'menu_class' => 'main-menu',
 					'menu_id' => 'nav',
-					'theme_location' => 'primary',
+					'theme_location' => 'header-menu',
 					'container' => ''
 				));?>
-
-				<!-- <?php wp_nav_menu(array('theme_location'=>'primary'));?> -->
 
 			</nav>
 

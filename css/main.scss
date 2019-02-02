@@ -6,6 +6,7 @@ $text-grey: #333333;
 $yellow: #ffe000;
 
 /* ========= RESET ========= */
+
 * {
 	padding: 0;
   margin: 0;
@@ -20,109 +21,300 @@ body {
   font-family: 'Open Sans', Verdana;
 }
 
-/* ========= HEADER ========= */
 
+/* ========= MOBILE FIRST: HEADER ========= */
 
 header {
-  background-color: #ffffff;
-  height: 118px;
-  margin-bottom: 50px;
+	background-color: #ffffff;
+	h1 {
+		font-family: 'Megrim', Courier;
+		font-size: 2.8em;
+		a {
+			text-decoration: none;
+			color: $text-grey;
+		}
+	}
+	h2 {
+		font-family: 'Josefin Slab', Courier;
+		font-weight: 600;
+		font-size: 1.1em;
+		color: $text-grey;
+	}
 }
 
 .title {
-  padding: 8px 30px;
+	padding: 8px 20px 15px;
 }
 
-header h1 {
-  font-family: 'Megrim', Courier;
-  font-size: 3.6em;
-}
-
-header h1 a {
-  text-decoration: none;
-  color: #000000;
-}
-
-header h2 {
-  font-family: 'Josefin Slab', Courier;
-  font-weight: 600;
-  font-size: 1.4em;
-}
-
-/* ========= NAVIGATION ========= */
-
-nav {
-  background-color: $border-grey;
-  min-height: 36px;
-  padding: 0 24px;
-  text-align: right;
-  color: #ffffff;
-}
-
-nav li {
-  display: inline-block;
-  padding: 8px 22px;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 0.6px;
-}
-
-nav li a {
-  text-decoration: none;
-  color: #ffffff;
-  border-bottom: 9px solid transparent;
-}
-
-nav li a:hover {
-  transition: 0.3s;
-  color: $yellow;
-  border-bottom: 9px solid $yellow;
-}
-
-/* ========= PAGE TITLE ========= */
-
-.page-title-text h3 {
-  padding: 5px 0;
-  margin-left: 10%;
-  color: $text-grey;
-  text-transform: uppercase;
-  font-size: 1.8em;
-}
-
-.page-title-text h4 {
-  background-color: $border-grey;
-  color: #ffffff;
-  padding: 4px 10% 6px;
-  margin-bottom: 15px;
-  font-weight: 500;
-  font-size: 1em;
-  letter-spacing: 0.2px;
-  width: fit-content;
-}
-
-.page-title-text a {
-  color: $teal;
-}
-
-.page-title-text a:hover {
-  color: #000000;
-}
-
-/* ========= PAGE CONTENT + SINGLE POST CONTENT ========= */
+/* ========= MOBILE: PAGE CONTENT ========= */
 
 .page-content, .single-content {
   background-color: #ffffff;
   border: 1px solid $border-grey;
-  width: 80%;
-  max-width: 900px;
+  width: 85%;
   min-height: 200px;
-  padding: 30px 40px;
-  margin: 0 auto 100px;
+  padding: 15px 20px 20px;
+  margin: 42px auto 70px;
 }
 
-.single-content {
-  margin-top: 80px;
+/* ========= MOBILE: NAV MENU ========= */
+
+nav {
+	background-color: $border-grey;
+	min-height: 36px;
+	padding: 0 20px;
+	text-align: left;
+	color: #ffffff;
+	position: relative;
+	z-index: 99;
+	li {
+		display: block;
+		padding: 0 12px;
+		text-transform: uppercase;
+		font-size: 0.9em;
+		letter-spacing: 0.6px;
+		a {
+			text-decoration: none;
+			color: #ffffff;
+			// border-bottom: 9px solid transparent;
+			&:hover {
+				transition: 0.3s;
+				color: $yellow;
+				// border-bottom: 9px solid $yellow;
+				text-decoration: underline;
+  		}
+		}
+	}
 }
+
+.nav-menu-group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.main-menu {
+	display: none;
+}
+
+.show-nav .main-menu {
+	display: block;
+	line-height: 2em;
+	padding: 14px 0;
+}
+
+.navicon {
+	position: relative;
+	width: 36px;
+	height: 30px;
+	float: right;
+	margin: 10px;
+	&:hover i {
+		background-color: $yellow;
+	}
+}
+
+// .navicon:hover i {
+// 	background-color: #ffe000;
+// }
+
+i {
+	position: absolute;
+	top: 12px;
+	right: 2px;
+	width: 34px;
+	height: 3px;
+	background-color: rgba(255, 255, 255, 1);
+	transition: all 300ms;
+	&:first-of-type {
+		top: 0px;
+		transform-origin: left center;
+	}
+	&:last-of-type {
+		top: 24px;
+		transform-origin: left center;
+	}
+}
+
+.show-nav i:first-of-type + i {
+	opacity: 0;
+}
+.show-nav i:first-of-type {
+	transform: rotate(45deg);
+	right: -3px;
+}
+.show-nav i:last-of-type {
+	transform: rotate(-45deg);
+	right: -3px;
+}
+
+/* ========= NAVIGATION ========= */
+
+// nav {
+//   background-color: $border-grey;
+//   min-height: 36px;
+//   padding: 0 24px;
+//   text-align: right;
+//   color: #ffffff;
+// }
+//
+// nav li {
+//   display: inline-block;
+//   padding: 8px 22px;
+//   text-transform: uppercase;
+//   font-size: 0.9em;
+//   letter-spacing: 0.6px;
+// }
+//
+// nav li a {
+//   text-decoration: none;
+//   color: #ffffff;
+//   border-bottom: 9px solid transparent;
+// }
+//
+// nav li a:hover {
+//   transition: 0.3s;
+//   color: $yellow;
+//   border-bottom: 9px solid $yellow;
+// }
+
+/* ========= HEADER ========= */
+
+@media only screen and (min-width: 600px) {
+  .title {
+    padding: 8px 30px 18px;
+  }
+  header h1 {
+    font-size: 3.6em;
+  }
+  header h2 {
+    font-size: 1.4em;
+  }
+}
+
+/* ========= NAVIGATION ========= */
+
+@media only screen and (min-width: 600px) {
+  nav {
+    padding: 0 24px;
+    text-align: right;
+		li {
+	    display: inline-block;
+	    padding: 8px 22px;
+			a {
+		    // text-decoration: none;
+		    // color: #ffffff;
+		    border-bottom: 9px solid transparent;
+				&:hover {
+			    // transition: 0.3s;
+			    // color: $yellow;
+			    border-bottom: 9px solid $yellow;
+					text-decoration: none;
+			  }
+		  }
+	  }
+  }
+  .navicon {
+    display: none;
+  }
+  .main-menu {
+  	display: inline-block;
+  }
+}
+
+
+/* ========= PAGE TITLE ========= */
+
+.page-title-text {
+	h3 {
+	  padding: 5px 0;
+	  margin-left: 10%;
+	  color: $text-grey;
+	  text-transform: uppercase;
+	  font-size: 1.8em;
+	}
+	h4 {
+	  background-color: $border-grey;
+	  color: #ffffff;
+	  padding: 4px 10% 6px;
+	  margin-bottom: 15px;
+	  font-weight: 500;
+	  font-size: 1em;
+	  letter-spacing: 0.2px;
+	  width: fit-content;
+	}
+	a {
+	  color: $teal;
+		&:hover {
+		  color: #000000;
+		}
+	}
+}
+
+
+// .page-title-text h3 {
+//   padding: 5px 0;
+//   margin-left: 10%;
+//   color: $text-grey;
+//   text-transform: uppercase;
+//   font-size: 1.8em;
+// }
+// .page-title-text h4 {
+//   background-color: $border-grey;
+//   color: #ffffff;
+//   padding: 4px 10% 6px;
+//   margin-bottom: 15px;
+//   font-weight: 500;
+//   font-size: 1em;
+//   letter-spacing: 0.2px;
+//   width: fit-content;
+// }
+// .page-title-text a {
+//   color: $teal;
+// }
+// .page-title-text a:hover {
+//   color: #000000;
+// }
+
+/* ========= PAGE CONTENT + SINGLE POST CONTENT ========= */
+
+@media only screen and (min-width: 510px) {
+  .page-content, .single-content {
+    width: 80%;
+    max-width: 900px;
+    padding: 20px 30px 30px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .page-content, .single-content {
+    width: 80%;
+    max-width: 900px;
+    padding: 20px 40px 40px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .page-content, .single-content {
+    width: 80%;
+    max-width: 900px;
+    padding: 20px 60px 60px;
+  }
+}
+
+// .page-content, .single-content {
+//   background-color: #ffffff;
+//   border: 1px solid $border-grey;
+//   width: 80%;
+//   max-width: 900px;
+//   min-height: 200px;
+//   padding: 30px 40px;
+//   margin: 0 auto 100px;
+// }
+//
+// .single-content {
+//   margin-top: 80px;
+// }
 
 .single-content h3 {
   color: $text-grey;
@@ -132,11 +324,20 @@ nav li a:hover {
 .single-image {
   max-width: 780px;
   margin: 15px auto;
+	img {
+		width: 100%;
+	}
 }
 
 .single-text {
   color: $text-grey;
-  line-height: 1.6em;
+  line-height: 1.7em;
+	a {
+	  color: $teal;
+		&:hover {
+		  color: #000000;
+		}
+	}
 }
 
 
@@ -149,33 +350,46 @@ nav li a:hover {
   display: grid;
   grid-gap: 25px;
   grid-template-columns: repeat(2, 1fr);
+	img {
+	  max-width: 100%;
+	  border: 1px solid #666;
+	}
 }
 
-img {
-  max-width: 100%;
-  border: 1px solid #666;
-}
+// img {
+//   max-width: 100%;
+//   border: 1px solid #666;
+// }
 
 .grid-item {
   background-color: #ffffff;
   border: 1px solid $border-grey;
   padding: 14px 18px;
   color: #333;
+	h3 {
+	  padding: 6px 0;
+		a {
+		  text-decoration: none;
+		  color: $teal;
+			&:hover {
+			  text-decoration: underline;
+			  color: #000000;
+			}
+		}
+	}
 }
 
-.grid-item h3 {
-  padding: 6px 0;
-}
-
-.grid-item h3 a {
-  text-decoration: none;
-  color: $teal;
-}
-
-.grid-item h3 a:hover {
-  text-decoration: underline;
-  color: #000000;
-}
+// .grid-item h3 {
+//   padding: 6px 0;
+// }
+// .grid-item h3 a {
+//   text-decoration: none;
+//   color: $teal;
+// }
+// .grid-item h3 a:hover {
+//   text-decoration: underline;
+//   color: #000000;
+// }
 
 .read-more, .read-more a {
   color: $teal;
