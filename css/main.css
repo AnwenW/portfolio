@@ -105,7 +105,7 @@ i {
 /* ========= MOBILE: FRONT PAGE POSTS ========= */
 .posts-grid {
   width: 90%;
-  margin: 20px auto 100px;
+  margin: 28px auto 100px;
   display: grid;
   grid-gap: 18px;
   grid-template-columns: 1fr; }
@@ -163,14 +163,22 @@ i {
 .page-content, .single-content {
   background-color: #ffffff;
   border: 1px solid #444444;
-  width: 85%;
   min-height: 200px;
   padding: 15px 20px 20px;
   margin: 42px auto 70px; }
 
-.single-content h3 {
-  color: #333333;
-  font-size: 1.3em; }
+.standard-page {
+  width: 90%;
+  margin: 28px auto 100px; }
+
+.page-content {
+  width: 100%; }
+
+.single-content {
+  width: 90%; }
+  .single-content h3 {
+    color: #333333;
+    font-size: 1.3em; }
 
 .single-image {
   max-width: 780px;
@@ -183,18 +191,20 @@ i {
   color: #333333;
   line-height: 1.7em; }
   .single-text a {
-    color: #076f96; }
+    color: #076f96;
+    font-weight: 600; }
     .single-text a:hover {
       color: #000000; }
 
 .projects-back {
   float: right; }
-  .projects-back a {
-    color: #076f96;
-    font-weight: 600;
-    padding: 4px 0; }
-    .projects-back a:hover {
-      color: #000000; }
+
+.projects-back, .projects-back a {
+  color: #076f96;
+  font-weight: 600;
+  padding: 4px 0; }
+  .projects-back:hover, .projects-back a:hover {
+    color: #000000; }
 
 /* ========== MEDIA QUERIES ========== */
 /* ========= HEADER ========= */
@@ -228,18 +238,23 @@ i {
 /* ========= PAGE CONTENT + SINGLE POST CONTENT ========= */
 @media only screen and (min-width: 510px) {
   .page-content, .single-content {
-    width: 80%;
     max-width: 900px;
-    padding: 20px 30px 30px; } }
+    padding: 20px 30px 30px; }
+
+  .standard-page {
+    width: 80%;
+    max-width: 900px; }
+
+  .page-content {
+    width: 100%; }
+
+  .single-content {
+    width: 80%; } }
 @media only screen and (min-width: 600px) {
   .page-content, .single-content {
-    width: 80%;
-    max-width: 900px;
     padding: 20px 40px 40px; } }
 @media only screen and (min-width: 800px) {
   .page-content, .single-content {
-    width: 80%;
-    max-width: 900px;
     padding: 20px 60px 60px; } }
 /* ========= FRONT PAGE POSTS + PAGE TITLE ========= */
 @media only screen and (min-width: 500px) {

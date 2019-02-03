@@ -136,7 +136,7 @@ i {
 
 .posts-grid {
   width: 90%;
-  margin: 20px auto 100px;
+  margin: 28px auto 100px;
   display: grid;
   grid-gap: 18px;
   grid-template-columns: 1fr;
@@ -211,15 +211,26 @@ i {
 .page-content, .single-content {
   background-color: #ffffff;
   border: 1px solid $border-grey;
-  width: 85%;
   min-height: 200px;
   padding: 15px 20px 20px;
   margin: 42px auto 70px;
 }
 
-.single-content h3 {
-  color: $text-grey;
-  font-size: 1.3em;
+.standard-page {
+	width: 90%;
+	margin: 28px auto 100px;
+}
+
+.page-content {
+	width: 100%;
+}
+
+.single-content {
+  width: 90%;
+	h3 {
+	  color: $text-grey;
+	  font-size: 1.3em;
+	}
 }
 
 .single-image {
@@ -236,6 +247,7 @@ i {
   line-height: 1.7em;
 	a {
 	  color: $teal;
+		font-weight: 600;
 		&:hover {
 		  color: #000000;
 		}
@@ -244,13 +256,14 @@ i {
 
 .projects-back {
 	float: right;
-	a {
-	  color: $teal;
-		font-weight: 600;
-	  padding: 4px 0;
-		&:hover {
-		  color: #000000;
-		}
+}
+
+.projects-back, .projects-back a {
+  color: $teal;
+	font-weight: 600;
+  padding: 4px 0;
+	&:hover {
+	  color: #000000;
 	}
 }
 
@@ -300,51 +313,33 @@ i {
 
 @media only screen and (min-width: 510px) {
   .page-content, .single-content {
-    width: 80%;
     max-width: 900px;
     padding: 20px 30px 30px;
   }
+	.standard-page {
+		width: 80%;
+		max-width: 900px;
+	}
+	.page-content {
+		width: 100%;
+	}
+	.single-content {
+	  width: 80%;
+	}
 }
 
 @media only screen and (min-width: 600px) {
   .page-content, .single-content {
-    width: 80%;
-    max-width: 900px;
     padding: 20px 40px 40px;
   }
 }
 
 @media only screen and (min-width: 800px) {
   .page-content, .single-content {
-    width: 80%;
-    max-width: 900px;
     padding: 20px 60px 60px;
   }
 }
 
-// .single-content h3 {
-//   color: $text-grey;
-//   font-size: 1.2em;
-// }
-//
-// .single-image {
-//   max-width: 780px;
-//   margin: 15px auto;
-// 	img {
-// 		width: 100%;
-// 	}
-// }
-//
-// .single-text {
-//   color: $text-grey;
-//   line-height: 1.7em;
-// 	a {
-// 	  color: $teal;
-// 		&:hover {
-// 		  color: #000000;
-// 		}
-// 	}
-// }
 
 /* ========= FRONT PAGE POSTS + PAGE TITLE ========= */
 

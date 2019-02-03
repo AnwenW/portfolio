@@ -23,7 +23,9 @@
 		endif;
 		?>
 
-		<div class="projects-back"><a href="http://anwen-w.local/">Back to Coding Projects</a></div>
+		<div class="projects-back">
+			<p><a href="http://anwen-w.local/">Back to Coding Projects</a> >></p>
+		</div>
 
 	</div> <!-- closes single-content -->
 

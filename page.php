@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<!-- <div> -->
+	<div class="standard-page">
 
     <?php if(have_posts()) :
   		while(have_posts()) : the_post(); ?>
@@ -14,6 +14,7 @@
   	endif;
   	?>
 
+      <!-- Advanced Custom Fields? What's this doing? -->
   		<!-- <?php get_template_part('templates/loop')?>
 
   		<?php if (is_page('Supplementary')) { the_field('basic'); } ?>
@@ -30,6 +31,6 @@
 
   		} ?> -->
 
-	<!-- </div> -->
+	</div> <!-- closes standard-page -->
 
 <?php get_footer(); ?>
