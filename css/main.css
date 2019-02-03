@@ -12,6 +12,9 @@ body {
   background-position-y: 14px;
   font-family: 'Open Sans', Verdana; }
 
+p {
+  margin-bottom: 12px; }
+
 /* ========= MOBILE FIRST: HEADER ========= */
 header {
   background-color: #ffffff; }
@@ -128,6 +131,8 @@ i {
       .grid-item h3 a:hover {
         text-decoration: underline;
         color: #000000; }
+  .grid-item p {
+    margin-bottom: 0; }
 
 .read-more {
   display: grid;
@@ -164,7 +169,7 @@ i {
   background-color: #ffffff;
   border: 1px solid #444444;
   min-height: 200px;
-  padding: 15px 20px 20px;
+  padding: 15px 20px 50px;
   margin: 42px auto 70px; }
 
 .standard-page {
@@ -201,8 +206,7 @@ i {
 
 .projects-back, .projects-back a {
   color: #076f96;
-  font-weight: 600;
-  padding: 4px 0; }
+  font-weight: 600; }
   .projects-back:hover, .projects-back a:hover {
     color: #000000; }
 
@@ -239,7 +243,7 @@ i {
 @media only screen and (min-width: 510px) {
   .page-content, .single-content {
     max-width: 900px;
-    padding: 20px 30px 30px; }
+    padding: 20px 30px 50px; }
 
   .standard-page {
     width: 80%;
@@ -252,7 +256,7 @@ i {
     width: 80%; } }
 @media only screen and (min-width: 600px) {
   .page-content, .single-content {
-    padding: 20px 40px 40px; } }
+    padding: 20px 40px 50px; } }
 @media only screen and (min-width: 800px) {
   .page-content, .single-content {
     padding: 20px 60px 60px; } }

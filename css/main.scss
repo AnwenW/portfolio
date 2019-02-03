@@ -22,6 +22,10 @@ body {
   font-family: 'Open Sans', Verdana;
 }
 
+p {
+	margin-bottom: 12px;
+}
+
 /* ========= MOBILE FIRST: HEADER ========= */
 
 header {
@@ -164,6 +168,9 @@ i {
 			}
 		}
 	}
+	p {
+		margin-bottom: 0;
+	}
 }
 
 .read-more {
@@ -212,7 +219,7 @@ i {
   background-color: #ffffff;
   border: 1px solid $border-grey;
   min-height: 200px;
-  padding: 15px 20px 20px;
+  padding: 15px 20px 50px;
   margin: 42px auto 70px;
 }
 
@@ -261,7 +268,6 @@ i {
 .projects-back, .projects-back a {
   color: $teal;
 	font-weight: 600;
-  padding: 4px 0;
 	&:hover {
 	  color: #000000;
 	}
@@ -314,7 +320,7 @@ i {
 @media only screen and (min-width: 510px) {
   .page-content, .single-content {
     max-width: 900px;
-    padding: 20px 30px 30px;
+    padding: 20px 30px 50px;
   }
 	.standard-page {
 		width: 80%;
@@ -330,7 +336,7 @@ i {
 
 @media only screen and (min-width: 600px) {
   .page-content, .single-content {
-    padding: 20px 40px 40px;
+    padding: 20px 40px 50px;
   }
 }
 
