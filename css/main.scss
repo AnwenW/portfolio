@@ -26,6 +26,10 @@ p {
 	margin-bottom: 12px;
 }
 
+.no-margin {
+	margin: 0;
+}
+
 /* ========= MOBILE FIRST: HEADER ========= */
 
 header {
@@ -270,6 +274,23 @@ i {
 	font-weight: 600;
 	&:hover {
 	  color: #000000;
+	}
+}
+
+.link-button {
+	font-size: 1em;
+  font-weight: 600;
+  font-family: 'Open Sans', Verdana;
+	color: $teal;
+	border: 1.5px solid $teal;
+  border-radius: 2px;
+  padding: 4px 8px;
+  margin: 4px 5px 4px 0;
+	&:hover {
+		border-color: $border-grey;
+		background-color: $border-grey;
+		color: #ffffff;
+		cursor: pointer;
 	}
 }
 

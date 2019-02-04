@@ -15,6 +15,9 @@ body {
 p {
   margin-bottom: 12px; }
 
+.no-margin {
+  margin: 0; }
+
 /* ========= MOBILE FIRST: HEADER ========= */
 header {
   background-color: #ffffff; }
@@ -209,6 +212,21 @@ i {
   font-weight: 600; }
   .projects-back:hover, .projects-back a:hover {
     color: #000000; }
+
+.link-button {
+  font-size: 1em;
+  font-weight: 600;
+  font-family: 'Open Sans', Verdana;
+  color: #076f96;
+  border: 1.5px solid #076f96;
+  border-radius: 2px;
+  padding: 4px 8px;
+  margin: 4px 5px 4px 0; }
+  .link-button:hover {
+    border-color: #444444;
+    background-color: #444444;
+    color: #ffffff;
+    cursor: pointer; }
 
 /* ========== MEDIA QUERIES ========== */
 /* ========= HEADER ========= */
