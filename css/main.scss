@@ -74,8 +74,8 @@ nav {
 			text-decoration: none;
 			color: #ffffff;
 			border-bottom: 2px solid transparent;
+			transition: all 250ms;
 			&:hover {
-				transition: 0.3s;
 				color: $yellow;
 				border-bottom: 2px solid $yellow;
   		}
@@ -166,6 +166,7 @@ i {
 		a {
 		  text-decoration: none;
 		  color: $teal;
+			transition: all 250ms;
 			&:hover {
 			  text-decoration: underline;
 			  color: #000000;
@@ -187,6 +188,7 @@ i {
   color: $teal;
   font-weight: 600;
   padding: 4px 0;
+	transition: all 250ms;
 	&:hover {
 	  color: #000000;
 	}
@@ -211,6 +213,7 @@ i {
 	}
 	a {
 	  color: $teal;
+		transition: all 250ms;
 		&:hover {
 		  color: #000000;
 		}
@@ -223,8 +226,8 @@ i {
   background-color: #ffffff;
   border: 1px solid $border-grey;
   min-height: 200px;
-  padding: 15px 20px 50px;
-  margin: 42px auto 70px;
+	padding: 20px 20px 50px;
+	margin: 30px auto 70px;
 }
 
 .standard-page {
@@ -234,6 +237,14 @@ i {
 
 .page-content {
 	width: 100%;
+	a {
+		color: $teal;
+	  font-weight: 600;
+		transition: all 250ms;
+		&:hover {
+			color: #000000;
+		}
+	}
 }
 
 .single-content {
@@ -259,6 +270,7 @@ i {
 	a {
 	  color: $teal;
 		font-weight: 600;
+		transition: all 250ms;
 		&:hover {
 		  color: #000000;
 		}
@@ -272,6 +284,7 @@ i {
 .projects-back, .projects-back a {
   color: $teal;
 	font-weight: 600;
+	transition: all 250ms;
 	&:hover {
 	  color: #000000;
 	}
@@ -286,11 +299,40 @@ i {
   border-radius: 2px;
   padding: 4px 8px;
   margin: 4px 5px 4px 0;
+	transition: all 250ms;
 	&:hover {
 		border-color: $border-grey;
 		background-color: $border-grey;
 		color: #ffffff;
 		cursor: pointer;
+	}
+}
+
+/*======== CONTACT FORM ======== */
+
+div .wpforms-container-full .wpforms-form {
+	.wpforms-field-label {
+		font-weight: 600;
+	  color: $text-grey;
+	}
+	button[type=submit] {
+    background: none;
+    color: $teal;
+  	font-size: 1em;
+    font-weight: 600;
+    font-family: 'Open Sans', Verdana;
+    border: 1.5px solid $teal;
+    border-radius: 2px;
+		transition: all 250ms;
+		&:hover {
+	    background: $border-grey;
+	  	color: #ffffff;
+	  	font-size: 1em;
+	    font-weight: 600;
+	    font-family: 'Open Sans', Verdana;
+	    border: 1.5px solid $border-grey;
+	    border-radius: 2px;
+		}
 	}
 }
 
@@ -341,7 +383,7 @@ i {
 @media only screen and (min-width: 510px) {
   .page-content, .single-content {
     max-width: 900px;
-    padding: 20px 30px 50px;
+    padding: 30px 30px 50px;
   }
 	.standard-page {
 		width: 80%;
@@ -357,13 +399,13 @@ i {
 
 @media only screen and (min-width: 600px) {
   .page-content, .single-content {
-    padding: 20px 40px 50px;
+    padding: 30px 40px 50px;
   }
 }
 
 @media only screen and (min-width: 800px) {
   .page-content, .single-content {
-    padding: 20px 60px 60px;
+    padding: 30px 60px 60px;
   }
 }
 
@@ -416,5 +458,18 @@ i {
 		h4 {
 		 	padding: 5px 18px 0;
 		}
+	}
+}
+
+.social-icons {
+	.twitter {
+		background-image: url("images/twitter-icon.svg");
+		width: 75px;
+	}
+	.instagram {
+
+	}
+	.linkedin {
+
 	}
 }

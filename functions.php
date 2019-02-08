@@ -96,6 +96,13 @@ add_filter( 'post_thumbnail_html', 'remove_image_size_attributes' );
 add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
 
 
+/*
+=============================================
+DISABLE ADMIN BAR
+=============================================
+*/
+
+add_filter('show_admin_bar', '__return_false');
 
 
 

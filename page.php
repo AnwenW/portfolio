@@ -7,8 +7,9 @@
 
 		<div class="page-title-text">
 			<h3 class="page-title"><?php the_title(); ?></h3>
-			<section class="page-content"><?php the_content(); ?></section>
 		</div>
+		
+		<section class="page-content"><?php the_content(); ?></section>
 
   		<?php endwhile;
   	endif;
