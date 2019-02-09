@@ -152,23 +152,19 @@ i {
     color: #000000; }
 
 /* ========= MOBILE: PAGE TITLE ========= */
-.page-title-text h3 {
-  padding: 0 12px 5px;
-  color: #333333;
-  text-transform: uppercase;
-  font-size: 1.3em;
-  border-bottom: 3px solid #333333; }
 .page-title-text h4 {
   color: #333333;
   padding: 5px 14px 0;
   font-weight: 600;
   font-size: 1em;
   letter-spacing: 0.1px; }
-.page-title-text a {
-  color: #076f96;
-  transition: all 250ms; }
-  .page-title-text a:hover {
-    color: #000000; }
+
+.page-title {
+  padding: 0 12px 5px;
+  color: #333333;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  border-bottom: 3px solid #333333; }
 
 /* ========= MOBILE: PAGE + SINGLE POST ========= */
 .page-content, .single-content {
@@ -195,7 +191,7 @@ i {
   width: 90%; }
   .single-content h3 {
     color: #333333;
-    font-size: 1.3em; }
+    font-size: 1.2em; }
 
 .single-image {
   max-width: 780px;
@@ -294,31 +290,41 @@ div .wpforms-container-full .wpforms-form button[type=submit] {
 /* ========= PAGE CONTENT + SINGLE POST CONTENT ========= */
 @media only screen and (min-width: 510px) {
   .page-content, .single-content {
-    max-width: 900px;
-    padding: 30px 30px 50px; }
+    max-width: 900px; }
 
   .standard-page {
     width: 80%;
     max-width: 900px; }
 
   .page-content {
-    width: 100%; }
+    width: 100%;
+    padding: 30px 30px 50px; }
 
   .single-content {
-    width: 80%; } }
+    width: 80%;
+    padding: 20px 30px 50px; }
+    .single-content h3 {
+      font-size: 1.3em; } }
 @media only screen and (min-width: 600px) {
-  .page-content, .single-content {
-    padding: 30px 40px 50px; } }
+  .page-content {
+    padding: 30px 40px 50px; }
+
+  .single-content {
+    padding: 20px 40px 50px; } }
 @media only screen and (min-width: 800px) {
-  .page-content, .single-content {
-    padding: 30px 60px 60px; } }
+  .page-content {
+    padding: 30px 60px 60px; }
+
+  .single-content {
+    padding: 20px 60px 60px; } }
 /* ========= FRONT PAGE POSTS + PAGE TITLE ========= */
 @media only screen and (min-width: 500px) {
   .grid-item {
     padding: 14px 18px; }
 
-  .page-title-text h3 {
+  .page-title {
     padding: 0 17px 5px; }
+
   .page-title-text h4 {
     padding: 5px 18px 0; } }
 @media only screen and (min-width: 650px) {
@@ -332,21 +338,20 @@ div .wpforms-container-full .wpforms-form button[type=submit] {
 
   .page-title-text {
     grid-column: span 2; }
-    .page-title-text h3 {
-      padding: 0 12px 5px;
-      font-size: 1.4em; }
     .page-title-text h4 {
-      padding: 5px 14px 0; } }
+      padding: 5px 14px 0; }
+
+  .page-title {
+    padding: 0 12px 5px;
+    font-size: 1.4em; } }
 @media only screen and (min-width: 830px) {
   .grid-item {
     padding: 14px 18px; }
 
-  .page-title-text h3 {
-    padding: 0 17px 5px; }
   .page-title-text h4 {
-    padding: 5px 18px 0; } }
-.social-icons .twitter {
-  background-image: url("images/twitter-icon.svg");
-  width: 75px; }
+    padding: 5px 18px 0; }
+
+  .page-title {
+    padding: 0 17px 5px; } }
 
 /*# sourceMappingURL=main.css.map */
