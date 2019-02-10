@@ -68,7 +68,7 @@ nav {
 		display: block;
 		padding: 0 12px;
 		text-transform: uppercase;
-		font-size: 0.9em;
+		font-size: 1em;
 		letter-spacing: 0.6px;
 		a {
 			text-decoration: none;
@@ -95,7 +95,7 @@ nav {
 
 .show-nav .main-menu {
 	display: block;
-	line-height: 2em;
+	line-height: 3em;
 	padding: 14px 0;
 }
 
@@ -212,30 +212,6 @@ i {
 	border-bottom: 3px solid $text-grey;
 }
 
-// .page-title-text {
-// 	h3 {
-// 		padding: 0 12px 5px;
-// 		color: $text-grey;
-// 		text-transform: uppercase;
-// 		font-size: 1.3em;
-// 		border-bottom: 3px solid $text-grey;
-// 	}
-// 	h4 {
-// 		color: $text-grey;
-// 	 	padding: 5px 14px 0;
-// 	  font-weight: 600;
-// 	  font-size: 1em;
-// 	  letter-spacing: 0.1px;
-// 	}
-// 	a {
-// 	  color: $teal;
-// 		transition: all 250ms;
-// 		&:hover {
-// 		  color: #000000;
-// 		}
-// 	}
-// }
-
 /* ========= MOBILE: PAGE + SINGLE POST ========= */
 
 .page-content, .single-content {
@@ -258,6 +234,13 @@ i {
 	  font-weight: 600;
 		transition: all 250ms;
 		&:hover {
+			color: #000000;
+		}
+	}
+	.social-link a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
 			color: #000000;
 		}
 	}
@@ -291,6 +274,10 @@ i {
 		  color: #000000;
 		}
 	}
+	img {
+		width: 100%;
+		padding: 12px 40px 0;
+	}
 }
 
 .projects-back {
@@ -307,6 +294,7 @@ i {
 }
 
 .link-button {
+	background-color: #ffffff;
 	font-size: 1em;
   font-weight: 600;
   font-family: 'Open Sans', Verdana;
@@ -324,7 +312,47 @@ i {
 	}
 }
 
-/*======== CONTACT FORM ======== */
+/* ========== MOBILE: DOODLES GRID ======== */
+
+.doodles-grid {
+	display: grid;
+  width: 90%;
+  margin: 18px auto 100px;
+  grid-gap: 18px;
+  grid-template-columns: 1fr;
+	img {
+	  max-width: 100%;
+		border: 1px solid $light-border;
+	}
+}
+
+.doodles-grid-item {
+	display: grid;
+	justify-items: center;
+}
+
+
+/* ========== SOCIAL ICONS ========= */
+
+.social-icons {
+	margin: 0 auto;
+  min-width: 240px;
+  text-align: center;
+	img {
+		// display: inline-block;
+		margin: 0 10px 10px;
+		width: 50px;
+		height: 50px;
+		border-radius: 2px;
+		transition: all 250ms;
+		&:hover {
+			cursor: pointer;
+			filter: saturate(0) contrast(1.82);
+		}
+	}
+}
+
+/* ======== CONTACT FORM ======== */
 
 div .wpforms-container-full .wpforms-form {
 	.wpforms-field-label {
@@ -332,7 +360,7 @@ div .wpforms-container-full .wpforms-form {
 	  color: $text-grey;
 	}
 	button[type=submit] {
-    background: none;
+    background-color: #ffffff;
     color: $teal;
   	font-size: 1em;
     font-weight: 600;
@@ -341,7 +369,7 @@ div .wpforms-container-full .wpforms-form {
     border-radius: 2px;
 		transition: all 250ms;
 		&:hover {
-	    background: $border-grey;
+	    background-color: $border-grey;
 	  	color: #ffffff;
 	  	font-size: 1em;
 	    font-weight: 600;
@@ -377,6 +405,7 @@ div .wpforms-container-full .wpforms-form {
 		li {
 	    display: inline-block;
 	    padding: 8px 22px;
+			font-size: 0.9em;
 			a {
 		    border-bottom: 9px solid transparent;
 				&:hover {
@@ -393,8 +422,22 @@ div .wpforms-container-full .wpforms-form {
   }
 }
 
-
 /* ========= PAGE CONTENT + SINGLE POST CONTENT ========= */
+
+@media only screen and (min-width: 375px) {
+	.single-text img {
+	    width: 100%;
+	    padding: 12px 56px 0;
+	}
+}
+
+@media only screen and (min-width: 425px) {
+	.single-text img {
+	    width: 40%;
+	    padding: 12px 0 7px 14px;
+	    float: right;
+	}
+}
 
 @media only screen and (min-width: 510px) {
   .page-content, .single-content {
@@ -411,9 +454,6 @@ div .wpforms-container-full .wpforms-form {
 	.single-content {
 	  width: 80%;
     padding: 20px 30px 50px;
-		h3 {
-		  font-size: 1.3em;
-		}
 	}
 }
 
@@ -423,7 +463,16 @@ div .wpforms-container-full .wpforms-form {
   }
 	.single-content {
     padding: 20px 40px 50px;
+		h3 {
+		  font-size: 1.3em;
+		}
   }
+	.social-icons img {
+		width: 55px;
+		height: 55px;
+		border-radius: 3px;
+		margin: 0 10px 14px;
+	}
 }
 
 @media only screen and (min-width: 800px) {
@@ -449,15 +498,6 @@ div .wpforms-container-full .wpforms-form {
 	 	padding: 5px 18px 0;
 	}
 }
-// 	.page-title-text {
-// 		h3 {
-// 			padding: 0 17px 5px;
-// 		}
-// 		h4 {
-// 		 	padding: 5px 18px 0;
-// 		}
-// 	}
-// }
 
 @media only screen and (min-width: 650px) {
 	.grid-item {
@@ -478,16 +518,6 @@ div .wpforms-container-full .wpforms-form {
 		padding: 0 12px 5px;
 		font-size: 1.4em;
 	}
-	// .page-title-text {
-	// 	grid-column: span 2;
-	// 	h3 {
-	// 	  padding: 0 12px 5px;
-	// 	  font-size: 1.4em;
-	// 	}
-	// 	h4 {
-	// 	 	padding: 5px 14px 0;
-	// 	}
-	// }
 }
 
 @media only screen and (min-width: 830px) {
@@ -500,25 +530,39 @@ div .wpforms-container-full .wpforms-form {
 	.page-title {
 		padding: 0 17px 5px;
 	}
-	// .page-title-text {
-	// 	h3 {
-	// 		padding: 0 17px 5px;
-	// 	}
-	// 	h4 {
-	// 	 	padding: 5px 18px 0;
-	// 	}
-	// }
 }
 
-// .social-icons {
-// 	.twitter {
-// 		background-image: url("images/twitter-icon.svg");
-// 		width: 75px;
-// 	}
-// 	.instagram {
-//
-// 	}
-// 	.linkedin {
-//
-// 	}
-// }
+
+/* ========= DOODLES GRID ========= */
+
+@media only screen and (min-width: 400px) {
+	.doodles-grid {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (min-width: 510px) {
+	.doodles-grid {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.doodles-grid {
+	  grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (min-width: 650px) {
+	.doodles-grid {;
+		grid-gap: 20px;
+    margin: 25px auto 100px;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.doodles-grid {
+		max-width: 900px;
+	  grid-template-columns: repeat(4, 1fr);
+	}
+}
