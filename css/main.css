@@ -260,22 +260,7 @@ i {
   display: grid;
   justify-items: center; }
 
-/* ========== SOCIAL ICONS ========= */
-.social-icons {
-  margin: 0 auto;
-  min-width: 240px;
-  text-align: center; }
-  .social-icons img {
-    margin: 0 10px 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 2px;
-    transition: all 250ms; }
-    .social-icons img:hover {
-      cursor: pointer;
-      filter: saturate(0) contrast(1.82); }
-
-/* ======== CONTACT FORM ======== */
+/* ======== MOBILE: CONTACT FORM ======== */
 div .wpforms-container-full .wpforms-form .wpforms-field-label {
   font-weight: 600;
   color: #333333; }
@@ -296,6 +281,24 @@ div .wpforms-container-full .wpforms-form button[type=submit] {
     font-family: 'Open Sans', Verdana;
     border: 1.5px solid #444444;
     border-radius: 2px; }
+div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
+  transform: scale(0.815);
+  transform-origin: left; }
+
+/* ========== SOCIAL ICONS ========= */
+.social-icons {
+  margin: 0 auto;
+  min-width: 240px;
+  text-align: center; }
+  .social-icons img {
+    margin: 0 10px 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
+    transition: all 250ms; }
+    .social-icons img:hover {
+      cursor: pointer;
+      filter: saturate(0) contrast(1.82); }
 
 /* ========== MEDIA QUERIES ========== */
 /* ========= HEADER ========= */
@@ -426,5 +429,9 @@ div .wpforms-container-full .wpforms-form button[type=submit] {
   .doodles-grid {
     max-width: 900px;
     grid-template-columns: repeat(4, 1fr); } }
+/* ======== CONTACT FORM ======== */
+@media only screen and (min-width: 382px) {
+  div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
+    transform: scale(1); } }
 
 /*# sourceMappingURL=main.css.map */

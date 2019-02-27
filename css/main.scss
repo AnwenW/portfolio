@@ -331,28 +331,7 @@ i {
 	justify-items: center;
 }
 
-
-/* ========== SOCIAL ICONS ========= */
-
-.social-icons {
-	margin: 0 auto;
-  min-width: 240px;
-  text-align: center;
-	img {
-		// display: inline-block;
-		margin: 0 10px 10px;
-		width: 50px;
-		height: 50px;
-		border-radius: 2px;
-		transition: all 250ms;
-		&:hover {
-			cursor: pointer;
-			filter: saturate(0) contrast(1.82);
-		}
-	}
-}
-
-/* ======== CONTACT FORM ======== */
+/* ======== MOBILE: CONTACT FORM ======== */
 
 div .wpforms-container-full .wpforms-form {
 	.wpforms-field-label {
@@ -378,7 +357,33 @@ div .wpforms-container-full .wpforms-form {
 	    border-radius: 2px;
 		}
 	}
+ .wpforms-recaptcha-container {
+   transform: scale(0.815);
+   transform-origin: left;
+	}
 }
+
+/* ========== SOCIAL ICONS ========= */
+
+.social-icons {
+	margin: 0 auto;
+  min-width: 240px;
+  text-align: center;
+	img {
+		// display: inline-block;
+		margin: 0 10px 10px;
+		width: 50px;
+		height: 50px;
+		border-radius: 2px;
+		transition: all 250ms;
+		&:hover {
+			cursor: pointer;
+			filter: saturate(0) contrast(1.82);
+		}
+	}
+}
+
+
 
 /* ========== MEDIA QUERIES ========== */
 
@@ -564,5 +569,13 @@ div .wpforms-container-full .wpforms-form {
 	.doodles-grid {
 		max-width: 900px;
 	  grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+/* ======== CONTACT FORM ======== */
+
+@media only screen and (min-width: 382px) {
+	div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
+	   transform: scale(1);
 	}
 }
