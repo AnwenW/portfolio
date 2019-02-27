@@ -214,7 +214,7 @@ i {
 
 /* ========= MOBILE: PAGE + SINGLE POST ========= */
 
-.page-content, .single-content {
+.page-content, .single-content, .about-page-content {
   background-color: #ffffff;
   border: 1px solid $border-grey;
   min-height: 200px;
@@ -227,7 +227,7 @@ i {
 	margin: 28px auto 100px;
 }
 
-.page-content {
+.page-content, .about-page-content {
 	width: 100%;
 	a {
 		color: $teal;
@@ -311,6 +311,17 @@ i {
 		cursor: pointer;
 	}
 }
+
+/* ========== MOBILE: ABOUT PAGE ========= */
+
+.about-me-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-gap: 20px;
+	line-height: 1.5em;
+}
+
 
 /* ========== MOBILE: DOODLES GRID ======== */
 
@@ -452,7 +463,7 @@ div .wpforms-container-full .wpforms-form {
 		width: 80%;
 		max-width: 900px;
 	}
-	.page-content {
+	.page-content, .about-page-content {
 		width: 100%;
     padding: 30px 30px 50px;
 	}
@@ -537,6 +548,14 @@ div .wpforms-container-full .wpforms-form {
 	}
 }
 
+/* ========== ABOUT PAGE ========= */
+
+@media only screen and (min-width: 750px) {
+	.about-me-grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: "column1 column2 column3";
+	}
+}
 
 /* ========= DOODLES GRID ========= */
 
