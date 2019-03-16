@@ -25,6 +25,8 @@ $doodlespage_posts = new WP_Query(array(
 			endif;
 		?>
 
+
+
 		<div class="doodles-grid">
 
 			<?php if (have_posts()) :
@@ -38,8 +40,21 @@ $doodlespage_posts = new WP_Query(array(
 							$thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'thumbnail-size', true);
 						?>
 
-						<!-- <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumbnail_url[0]; ?>"></a> -->
+
+            <!-- <a href="<?php echo get_permalink(); ?>"><img src="<?php echo $thumbnail_url[0]; ?>"></a> -->
+
 						<img src="<?php echo $thumbnail_url[0]; ?>">
+
+
+            <!-- // trying to get the current (clicked) post id... this gets thumbnail id // -->
+            <!-- <a href="#modalPopup-<? the_ID(); ?>" data-id="<?php the_ID(); ?>"> -->
+              <?php echo get_the_id();?>
+            <!-- </a> -->
+
+
+            <!--  echo get_the_id();  returns ID of the current post,
+                  the_id();           prints it -->
+
 
 					</div> <!-- closes doodles-grid-item -->
 
@@ -47,9 +62,48 @@ $doodlespage_posts = new WP_Query(array(
 				wp_reset_postdata();
 			endif; ?>
 
+    <!-- // What's the difference between wp_reset_query and wp_reset_postdata? // -->
+    <!-- <?php wp_reset_query(); ?> -->
+
 		</div> <!-- closes doodles-grid -->
 
 	</div> <!-- closes standard-page -->
+
+
+  <!-- MODAL POPUP BOX -->
+
+  <div id="modalPopup">
+
+    <div class="modalContent">
+
+      <span class="modalClose">&times;</span>
+
+
+
+      <!-- <?php if (!$_GET) { ?>
+
+        <?php if(have_posts()) :
+    			while(have_posts()) : the_post(); ?>
+
+    				<?php
+    					if ( has_post_thumbnail() ) {
+    						the_post_thumbnail( 'full' );
+    					}
+    				?>
+
+    				<?php the_content(); ?>
+
+    			<?php endwhile;
+    		endif;
+    		?>
+
+      <?php } ?> -->
+
+
+
+    </div><!-- closes modalContent -->
+
+  </div><!-- closes modalPopup -->
 
 
 <?php get_footer(); ?>

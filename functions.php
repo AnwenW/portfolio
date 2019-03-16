@@ -14,8 +14,19 @@ INCLUDE STYLESHEET(S) + SCRIPTS
 function set_portfolio_style_script() { // N.B. Use unique function names
   wp_enqueue_style('main_stylesheet', get_template_directory_uri() . '/css/main.css', array(), '1.0.0', 'all');
   wp_enqueue_script('main_script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0', true);
+
+
+/* wp_localize_script test */
+  $dataJS = array(
+      'postID' => get_the_id()
+  );
+  wp_localize_script( 'main_script', 'phpVariable', $dataJS );
+/* ---------------------- */
 }
+
 add_action('wp_enqueue_scripts', 'set_portfolio_style_script');
+
+
 
 
 /*
