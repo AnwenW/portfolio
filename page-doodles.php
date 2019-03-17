@@ -41,18 +41,18 @@ $doodlespage_posts = new WP_Query(array(
 						?>
 
 
-            <!-- <a href="<?php echo get_permalink(); ?>"><img src="<?php echo $thumbnail_url[0]; ?>"></a> -->
 
 						<img src="<?php echo $thumbnail_url[0]; ?>">
 
 
             <!-- // trying to get the current (clicked) post id... this gets thumbnail id // -->
             <!-- <a href="#modalPopup-<? the_ID(); ?>" data-id="<?php the_ID(); ?>"> -->
+
               <?php echo get_the_id();?>
+
             <!-- </a> -->
 
-
-            <!--  echo get_the_id();  returns ID of the current post,
+            <!--  [echo] get_the_id();  returns ID of the current post,
                   the_id();           prints it -->
 
 
@@ -70,6 +70,7 @@ $doodlespage_posts = new WP_Query(array(
 	</div> <!-- closes standard-page -->
 
 
+
   <!-- MODAL POPUP BOX -->
 
   <div id="modalPopup">
@@ -78,28 +79,25 @@ $doodlespage_posts = new WP_Query(array(
 
       <span class="modalClose">&times;</span>
 
+        <!-- <?php if (!$_GET) { ?>
 
+          <?php if(have_posts()) :
+      			while(have_posts()) : the_post(); ?>
 
-      <!-- <?php if (!$_GET) { ?>
+      				<?php
+      					if ( has_post_thumbnail() ) {
+      						the_post_thumbnail( 'full' );
+      					}
+      				?>
 
-        <?php if(have_posts()) :
-    			while(have_posts()) : the_post(); ?>
+      				<?php the_content(); ?>
+              <?php echo get_the_id();?>
 
-    				<?php
-    					if ( has_post_thumbnail() ) {
-    						the_post_thumbnail( 'full' );
-    					}
-    				?>
+      			<?php endwhile;
+      		endif;
+      		?>
 
-    				<?php the_content(); ?>
-
-    			<?php endwhile;
-    		endif;
-    		?>
-
-      <?php } ?> -->
-
-
+        <?php } ?> -->
 
     </div><!-- closes modalContent -->
 

@@ -16,14 +16,14 @@ function set_portfolio_style_script() { // N.B. Use unique function names
   wp_enqueue_script('main_script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0', true);
 
 
-/* wp_localize_script test */
+/* ---- wp_localize_script test ----- */
   $dataJS = array(
-      'postID' => get_the_id()
+      'postID' => get_the_id() /* how do I get post thumbnail? */
   );
   wp_localize_script( 'main_script', 'phpVariable', $dataJS );
-/* ---------------------- */
-}
+/* ---------------------------------- */
 
+}
 add_action('wp_enqueue_scripts', 'set_portfolio_style_script');
 
 
