@@ -9,7 +9,7 @@ elToClick.addEventListener('click', function() {
 
 // === doodle thumbnails: click opens modal === //
 
-var modal = document.getElementById('modalPopup');
+var modal = document.querySelector('.modalPopup');
 var spanClose = document.querySelector('.modalClose');
 var modalDailyDate = document.querySelector('.dailyDate');
 
@@ -21,28 +21,26 @@ for (var i = 0; i < doodlesThumb.length; i++) {
 
 
 
-// test currentTarget alert //
-function showContent(event) {
-	console.log(phpVariable.postID);
-  // console.log(event.currentTarget.nodeName);
-}
-
-
-function doodlePopup() {
+function doodlePopup(e) {
   // change modal css to display it //
-  modal.style.display = 'block';
 
-	// test currentTarget alert //
-	showContent(event);
+
+	var targetModalId = e.target.dataset.targetModal;
+	var targetModal = document.getElementById(targetModalId);
+
+	console.log(targetModalId);
+
+  targetModal.style.display = 'block';
 }
-
 
 
 
 // === click span (x) to close modal === //
 
 spanClose.onclick = function() {
-  modal.style.display = 'none';
+
+	// need to target close button, like what I've done for target modal -- span close now in each modal
+  targetModal.style.display = 'none';
 }
 
 // === click anywhere outside modal to close it === //

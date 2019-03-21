@@ -30,25 +30,55 @@ $doodlespage_posts = new WP_Query(array(
 		<div class="doodles-grid">
 
 			<?php if (have_posts()) :
+
+        $index = 0;
+
 				while ($doodlespage_posts->have_posts()) : $doodlespage_posts->the_post(); ?>
+
+        <!-- MODAL POPUP BOX -->
+
+        <div id="modal<?php echo $index; ?>" class="modalPopup">
+
+          <div class="modalContent">
+
+            <span class="modalClose">&times;</span>
+
+              <?php
+                if ( has_post_thumbnail() ) {
+                  the_post_thumbnail( 'full');
+                }
+              ?>
+
+              <?php the_content(); ?>
+              <!-- <?php echo get_the_id();?> -->
+
+            </div><!-- closes modalContent -->
+
+          </div><!-- closes modalPopup -->
+
 
 					<div class="doodles-grid-item">
 
 						<!-- pull in featured images with width and height attributes removed-->
-						<?php
+						<!-- <?php
 							$thumbnail_id = get_post_thumbnail_id();
 							$thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'thumbnail-size', true);
-						?>
+						?> -->
+						<!-- <img src="<?php echo $thumbnail_url[0]; ?>"> -->
 
+            <?php $targetModalId = 'modal' . $index; ?>
 
-
-						<img src="<?php echo $thumbnail_url[0]; ?>">
+            <?php
+              if ( has_post_thumbnail() ) {
+                the_post_thumbnail( 'full', ['data-target-modal' => $targetModalId]);
+              }
+            ?>
 
 
             <!-- // trying to get the current (clicked) post id... this gets thumbnail id // -->
             <!-- <a href="#modalPopup-<? the_ID(); ?>" data-id="<?php the_ID(); ?>"> -->
 
-              <?php echo get_the_id();?>
+              <!-- <?php echo get_the_id();?> -->
 
             <!-- </a> -->
 
@@ -57,6 +87,8 @@ $doodlespage_posts = new WP_Query(array(
 
 
 					</div> <!-- closes doodles-grid-item -->
+
+          <?php $index++; ?>
 
 				<?php endwhile;
 				wp_reset_postdata();
@@ -71,37 +103,9 @@ $doodlespage_posts = new WP_Query(array(
 
 
 
-  <!-- MODAL POPUP BOX -->
 
-  <div id="modalPopup">
 
-    <div class="modalContent">
 
-      <span class="modalClose">&times;</span>
-
-        <!-- <?php if (!$_GET) { ?>
-
-          <?php if(have_posts()) :
-      			while(have_posts()) : the_post(); ?>
-
-      				<?php
-      					if ( has_post_thumbnail() ) {
-      						the_post_thumbnail( 'full' );
-      					}
-      				?>
-
-      				<?php the_content(); ?>
-              <?php echo get_the_id();?>
-
-      			<?php endwhile;
-      		endif;
-      		?>
-
-        <?php } ?> -->
-
-    </div><!-- closes modalContent -->
-
-  </div><!-- closes modalPopup -->
 
 
 <?php get_footer(); ?>

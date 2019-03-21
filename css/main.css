@@ -44,7 +44,7 @@ nav {
   text-align: left;
   color: #ffffff;
   position: relative;
-  z-index: 99; }
+  z-index: 10; }
   nav li {
     display: block;
     padding: 0 12px;
@@ -307,6 +307,56 @@ div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
     .social-icons img:hover {
       cursor: pointer;
       filter: saturate(0) contrast(1.82); }
+
+/* ===  MODAL (BACKGROUND) ===  */
+.doodles-grid-item:hover {
+  cursor: pointer; }
+  .doodles-grid-item:hover img {
+    max-width: 100%;
+    border: 1px solid black; }
+
+.modalPopup {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #ffe000;
+  /* Fallback color */
+  background-color: rgba(100, 100, 100, 0.5);
+  /* grey w/ opacity */
+  z-index: 20; }
+
+/* === MODAL CONTENT + BOX ===  */
+.modalContent {
+  background-color: white;
+  margin: auto;
+  padding: 20px 20px 30px;
+  border: 1px solid #444444;
+  width: 80%;
+  max-width: 800px;
+  min-height: 300px;
+  position: relative;
+  top: 254px;
+  letter-spacing: 0.5px;
+  line-height: 1.4em; }
+  .modalContent p {
+    font-size: 0.9em; }
+
+/* ===  MODAL CLOSE BUTTON (X) ===  */
+.modalClose {
+  color: #444444;
+  float: right;
+  font-size: 48px;
+  line-height: 26px; }
+  .modalClose:hover, .modalClose:focus {
+    color: #076f96;
+    text-decoration: none;
+    cursor: pointer; }
 
 /* ========== MEDIA QUERIES ========== */
 /* ========= HEADER ========= */
