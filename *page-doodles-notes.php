@@ -25,6 +25,8 @@ $doodlespage_posts = new WP_Query(array(
 			endif;
 		?>
 
+
+
 		<div class="doodles-grid">
 
 			<?php if (have_posts()) :
@@ -33,15 +35,13 @@ $doodlespage_posts = new WP_Query(array(
 
 				while ($doodlespage_posts->have_posts()) : $doodlespage_posts->the_post(); ?>
 
-        <!-- =====  MODAL POPUP BOX  ===== -->
+        <!-- MODAL POPUP BOX -->
 
         <div id="modal<?php echo $index; ?>" class="modalPopup">
 
           <div class="modalContent">
 
-            <!-- ////////////////////// I NEED TO CHANGE SPAN TO BUTTON FOR A11Y (AND THEN UNDO BUTTON STYLES). ALSO CONSIDER MAKING MODAL CLOSE ON ESC PRESS (FIND ID OF ESC KEY, THEN FUNCTION SHOULD BE SAME AS BUTTON CLICK) //////////////////////////// -->
-
-            <span id="modalClose<?php echo $index; ?>" class="modalClose">&times;</span>
+            <span class="modalClose">&times;</span>
 
               <?php
                 if ( has_post_thumbnail() ) {
@@ -74,6 +74,18 @@ $doodlespage_posts = new WP_Query(array(
               }
             ?>
 
+
+            <!-- // trying to get the current (clicked) post id... this gets thumbnail id // -->
+            <!-- <a href="#modalPopup-<? the_ID(); ?>" data-id="<?php the_ID(); ?>"> -->
+
+              <!-- <?php echo get_the_id();?> -->
+
+            <!-- </a> -->
+
+            <!--  [echo] get_the_id();  returns ID of the current post,
+                  the_id();           prints it -->
+
+
 					</div> <!-- closes doodles-grid-item -->
 
           <?php $index++; ?>
@@ -82,8 +94,18 @@ $doodlespage_posts = new WP_Query(array(
 				wp_reset_postdata();
 			endif; ?>
 
+    <!-- // What's the difference between wp_reset_query and wp_reset_postdata? // -->
+    <!-- <?php wp_reset_query(); ?> -->
+
 		</div> <!-- closes doodles-grid -->
 
 	</div> <!-- closes standard-page -->
+
+
+
+
+
+
+
 
 <?php get_footer(); ?>
