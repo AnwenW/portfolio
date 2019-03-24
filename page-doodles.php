@@ -39,9 +39,9 @@ $doodlespage_posts = new WP_Query(array(
 
           <div class="modalContent">
 
-            <!-- ////////////////////// I NEED TO CHANGE SPAN TO BUTTON FOR A11Y (AND THEN UNDO BUTTON STYLES). ALSO CONSIDER MAKING MODAL CLOSE ON ESC PRESS (FIND ID OF ESC KEY, THEN FUNCTION SHOULD BE SAME AS BUTTON CLICK) //////////////////////////// -->
+            <!-- <span id="modalClose<?php echo $index; ?>" class="modalClose">&times;</span> -->
 
-            <span id="modalClose<?php echo $index; ?>" class="modalClose">&times;</span>
+            <button aria-label="Close popup window" id="modalClose<?php echo $index; ?>" class="modalClose">&times;</button>
 
               <?php
                 if ( has_post_thumbnail() ) {

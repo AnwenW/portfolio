@@ -433,7 +433,7 @@ div .wpforms-container-full .wpforms-form {
   max-width: 800px;
   min-height: 300px;
 	position: relative;
-	top: 254px;
+	top: 60px;
   letter-spacing: 0.5px;
   line-height: 1.4em;
   p {
@@ -445,16 +445,21 @@ div .wpforms-container-full .wpforms-form {
 /* ===  MODAL CLOSE BUTTON (X) ===  */
 
 .modalClose {
+	background-color: transparent;
   color: $border-grey;
   float: right;
   font-size: 48px;
   line-height: 26px;
+	padding: 5px 10px 15px 10px;
   &:hover,
   &:focus {
     color: $teal;
     text-decoration: none;
     cursor: pointer;
   }
+	&:focus {
+    outline: thin dotted;
+	}
 }
 
 

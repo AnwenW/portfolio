@@ -341,7 +341,7 @@ div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
   max-width: 800px;
   min-height: 300px;
   position: relative;
-  top: 254px;
+  top: 60px;
   letter-spacing: 0.5px;
   line-height: 1.4em; }
   .modalContent p {
@@ -349,14 +349,21 @@ div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
 
 /* ===  MODAL CLOSE BUTTON (X) ===  */
 .modalClose {
+  background-color: transparent;
   color: #444444;
   float: right;
   font-size: 48px;
-  line-height: 26px; }
+  line-height: 26px;
+  padding: 5px 10px 15px 10px;
+}
   .modalClose:hover, .modalClose:focus {
     color: #076f96;
     text-decoration: none;
-    cursor: pointer; }
+    cursor: pointer;
+  }
+  .modalClose:focus {
+    outline: 1px solid;
+  }
 
 /* ========== MEDIA QUERIES ========== */
 /* ========= HEADER ========= */
