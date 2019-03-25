@@ -11,7 +11,6 @@ elToClick.addEventListener('click', function() {
 
 // === DOODLES THUMBNAILS: CLICK OPENS MODAL POPUP === //
 
-// var modal = document.querySelector('.modalPopup');
 var doodlesThumb = document.querySelectorAll('.doodles-grid-item');
 
 for (var i = 0; i < doodlesThumb.length; i++) {
@@ -30,10 +29,10 @@ function openModal(e) {  // changes modal CSS to display:block //
 
 // === MODAL CLOSE-BUTTON: CLICK TO CLOSE EACH MODAL === //
 
-var allModals = document.querySelectorAll('.modalContent');
+var allModals1 = document.querySelectorAll('.modalContent');
 
-for (var i = 0; i < allModals.length; i++) {
-	var modalCloseButton = allModals[i].querySelector('.modalClose');
+for (var i = 0; i < allModals1.length; i++) {
+	var modalCloseButton = allModals1[i].querySelector('.modalClose');
 	modalCloseButton.addEventListener('click', closeModal);
 }
 
@@ -43,25 +42,31 @@ function closeModal() {
 }
 
 
-// === CLICK ANYWHERE OUTSIDE MODAL TO CLOSE IT === // currently modal3 only - how to get this working for all modal IDs?
-
+// === CLICK ANYWHERE OUTSIDE MODAL TO CLOSE IT === //
 
 window.onclick = function(e) {
 
-	var modal3 = document.getElementById('modal3');
+	var allModals2 = document.querySelectorAll('.modalPopup');
 
-  if (e.target == modal3) {
-		console.log(this);
-    modal3.style.display = 'none';
-  }
+	for (var i = 0; i < allModals2.length; i++) {
+		var iModal = document.getElementById('modal'+[i]);
+	  if (e.target == iModal) {
+	    iModal.style.display = 'none';
+	  }
+	}
 }
 
-// === CLOSE MODAL ON ESC KEYDOWN === // again, currently modal3 only - how to get this working for all modal IDs?
 
-document.onkeyup = function (e) {
-  if (e.keyCode == 27) {
-		console.log('clicked esc');
-		modal1.style.display = 'none';
-    modal3.style.display = 'none';
-  }
+// === CLOSE MODAL ON ESC KEYDOWN === //
+
+document.onkeyup = function(e) {
+
+	var allModals3 = document.querySelectorAll('.modalPopup');
+
+	for (var i = 0; i < allModals3.length; i++) {
+		var iModal = document.getElementById('modal'+[i]);
+	  if (e.keyCode == 27) {
+	    iModal.style.display = 'none';
+	  }
+	}
 }
