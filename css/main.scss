@@ -395,10 +395,8 @@ div .wpforms-container-full .wpforms-form {
 	}
 }
 
-
-
-
-/* ===  MODAL (BACKGROUND) ===  */
+/* ===  MOBILE: MODAL  ===  */
+/* ===  MODAL BACKGROUND  ===  */
 
 .doodles-grid-item:hover {
 	cursor: pointer;
@@ -418,7 +416,6 @@ div .wpforms-container-full .wpforms-form {
   overflow: auto; /* Enable scroll if needed */
   background-color: $yellow; /* Fallback color */
 	background-color: rgba(100, 100, 100, 0.5); /* grey w/ opacity */
-  // background-color: rgba(255, 224, 0, 0.7); /* $yellow w/ opacity */
 	z-index: 20;
 }
 
@@ -427,20 +424,23 @@ div .wpforms-container-full .wpforms-form {
 .modalContent {
   background-color: white;
   margin: auto;
-  padding: 20px 20px 30px;
+  padding: 5px 12px 10px;
   border: 1px solid $border-grey;
-  width: 80%;
+  width: 94%;
   max-width: 800px;
   min-height: 300px;
 	position: relative;
-	top: 60px;
+	top: 10vh;
   letter-spacing: 0.5px;
   line-height: 1.4em;
   p {
-    font-size: 0.9em;
+    font-size: 1em;
+		text-align: center;
   }
+	img {
+		border: none;
+	}
 }
-
 
 /* ===  MODAL CLOSE BUTTON (X) ===  */
 
@@ -661,6 +661,29 @@ div .wpforms-container-full .wpforms-form {
 	.doodles-grid {
 		max-width: 900px;
 	  grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+/* === MODAL CONTENT + BOX ===  */
+
+@media only screen and (min-width: 500px) {
+	.modalContent {
+	  padding: 5px 15px 15px;
+	  width: 87%;
+		top: 5vh;
+	}
+}
+
+@media only screen and (min-width: 650px) {
+	.modalContent {
+	  padding: 5px 20px 15px;
+	  width: 80%;
+	}
+}
+
+@media only screen and (min-width: 1350px) {
+	.modalContent {
+		top: 10vh;
 	}
 }
 

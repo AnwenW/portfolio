@@ -43,11 +43,11 @@ $doodlespage_posts = new WP_Query(array(
 
             <button aria-label="Close popup window" id="modalClose<?php echo $index; ?>" class="modalClose">&times;</button>
 
-              <?php
+              <!-- <?php
                 if ( has_post_thumbnail() ) {
                   the_post_thumbnail( 'full');
                 }
-              ?>
+              ?> -->
 
               <?php the_content(); ?>
               <!-- <?php echo get_the_id();?> -->

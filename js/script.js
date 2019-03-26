@@ -18,11 +18,8 @@ for (var i = 0; i < doodlesThumb.length; i++) {
 }
 
 function openModal(e) {  // changes modal CSS to display:block //
-
 	var targetModalId = e.target.dataset.targetModal;
 	var targetModal = document.getElementById(targetModalId);
-
-	// console.log(targetModalId);
   targetModal.style.display = 'block';
 }
 

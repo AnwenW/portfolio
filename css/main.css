@@ -308,7 +308,8 @@ div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
       cursor: pointer;
       filter: saturate(0) contrast(1.82); }
 
-/* ===  MODAL (BACKGROUND) ===  */
+/* ===  MOBILE: MODAL  ===  */
+/* ===  MODAL BACKGROUND  ===  */
 .doodles-grid-item:hover {
   cursor: pointer; }
   .doodles-grid-item:hover img {
@@ -335,17 +336,20 @@ div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
 .modalContent {
   background-color: white;
   margin: auto;
-  padding: 20px 20px 30px;
+  padding: 5px 12px 10px;
   border: 1px solid #444444;
-  width: 80%;
+  width: 94%;
   max-width: 800px;
   min-height: 300px;
   position: relative;
-  top: 60px;
+  top: 10vh;
   letter-spacing: 0.5px;
   line-height: 1.4em; }
   .modalContent p {
-    font-size: 0.9em; }
+    font-size: 1em;
+    text-align: center; }
+  .modalContent img {
+    border: none; }
 
 /* ===  MODAL CLOSE BUTTON (X) ===  */
 .modalClose {
@@ -354,16 +358,13 @@ div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
   float: right;
   font-size: 48px;
   line-height: 26px;
-  padding: 5px 10px 15px 10px;
-}
+  padding: 5px 10px 15px 10px; }
   .modalClose:hover, .modalClose:focus {
     color: #076f96;
     text-decoration: none;
-    cursor: pointer;
-  }
+    cursor: pointer; }
   .modalClose:focus {
-    outline: 1px solid;
-  }
+    outline: thin dotted; }
 
 /* ========== MEDIA QUERIES ========== */
 /* ========= HEADER ========= */
@@ -499,6 +500,19 @@ div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
   .doodles-grid {
     max-width: 900px;
     grid-template-columns: repeat(4, 1fr); } }
+/* === MODAL CONTENT + BOX ===  */
+@media only screen and (min-width: 500px) {
+  .modalContent {
+    padding: 5px 15px 15px;
+    width: 87%;
+    top: 5vh; } }
+@media only screen and (min-width: 650px) {
+  .modalContent {
+    padding: 5px 20px 15px;
+    width: 80%; } }
+@media only screen and (min-width: 1350px) {
+  .modalContent {
+    top: 10vh; } }
 /* ======== CONTACT FORM ======== */
 @media only screen and (min-width: 382px) {
   div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
