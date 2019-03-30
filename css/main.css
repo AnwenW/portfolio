@@ -349,12 +349,14 @@ div .wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
     font-size: 1em;
     text-align: center; }
   .modalContent img {
-    border: none; }
+    border: none;
+    display: block; }
 
 /* ===  MODAL CLOSE BUTTON (X) ===  */
 .modalClose {
   background-color: transparent;
   color: #444444;
+  display: block;
   float: right;
   font-size: 48px;
   line-height: 26px;

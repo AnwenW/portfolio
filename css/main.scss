@@ -439,6 +439,7 @@ div .wpforms-container-full .wpforms-form {
   }
 	img {
 		border: none;
+		display: block;
 	}
 }
 
@@ -447,6 +448,7 @@ div .wpforms-container-full .wpforms-form {
 .modalClose {
 	background-color: transparent;
   color: $border-grey;
+	display: block;
   float: right;
   font-size: 48px;
   line-height: 26px;
